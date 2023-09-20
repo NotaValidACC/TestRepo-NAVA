@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(201, 201, 201);
+    width: 30rem;
+    height: 25rem;
+    border-radius: .6rem;
+    box-shadow: .6rem .6rem 0 rgb(167, 167, 167);
+    transition: transform 0.2s, box-shadow .2s;
+}
+
+.container .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .card h1{
+    font-weight: 600;
+    opacity: 70%;
+}
+
+.container .card p{
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 60%;
+}
+
+.container .card img{
+    width: 150px;
+    animation: chemicals 1s infinite;
+}
+
+.container:hover{
+    transform: translateX(.6rem) translateY(.6rem);
+    box-shadow: 0 0 0 rgb(167, 167, 167);
+}
+
+@keyframes chemicals {
+    0%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(-5px) rotate(-10deg);
+    }
+    50% {
+        transform: translateX(0) rotate(0deg);
+    }
+    75% {
+        transform: translateX(5px) rotate(10deg);
+    }
+    
+}
